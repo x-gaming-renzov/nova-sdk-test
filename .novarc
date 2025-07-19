@@ -1,0 +1,6 @@
+{
+  "orgId": "org123",
+  "appId": "app123",
+  "apiKey": "key123",
+  "apiEndpoint": "http://127.0.0.1:8000"
+}

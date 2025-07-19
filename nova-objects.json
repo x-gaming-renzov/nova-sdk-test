@@ -1,0 +1,209 @@
+{
+  "objects": {
+    "test-object-1": {
+      "type": "Param",
+      "keys": {
+        "color": {
+          "type": "text",
+          "description": "Number of tutorial steps",
+          "default": "red"
+        }
+      }
+    },
+    "onboarding-tutorial": {
+      "type": "Level",
+      "keys": {
+        "tutorial_steps": {
+          "type": "number",
+          "description": "Number of tutorial steps",
+          "default": 5
+        },
+        "skip_enabled": {
+          "type": "boolean",
+          "description": "Allow users to skip tutorial",
+          "default": false
+        },
+        "tutorial_theme": {
+          "type": "text",
+          "description": "Visual theme for tutorial",
+          "default": "standard"
+        }
+      }
+    },
+    "welcome-popup": {
+      "type": "Popup",
+      "keys": {
+        "popup_title": {
+          "type": "text",
+          "description": "Title text for welcome popup",
+          "default": "Welcome!"
+        },
+        "show_rewards": {
+          "type": "boolean",
+          "description": "Show welcome rewards",
+          "default": true
+        },
+        "reward_amount": {
+          "type": "number",
+          "description": "Amount of welcome coins",
+          "default": 100
+        }
+      }
+    },
+    "game-difficulty": {
+      "type": "Param",
+      "keys": {
+        "difficulty_level": {
+          "type": "text",
+          "description": "Game difficulty setting",
+          "default": "normal"
+        },
+        "enemy_health_multiplier": {
+          "type": "number",
+          "description": "Enemy health multiplier",
+          "default": 1.0
+        },
+        "drop_rate_bonus": {
+          "type": "number",
+          "description": "Item drop rate bonus",
+          "default": 0.0
+        }
+      }
+    },
+    "shop-offer": {
+      "type": "Popup",
+      "keys": {
+        "offer_title": {
+          "type": "text",
+          "description": "Special offer title",
+          "default": "Limited Time Offer!"
+        },
+        "discount_percentage": {
+          "type": "number",
+          "description": "Discount percentage",
+          "default": 50
+        },
+        "show_timer": {
+          "type": "boolean",
+          "description": "Show countdown timer",
+          "default": true
+        },
+        "offer_background": {
+          "type": "text",
+          "description": "Background theme",
+          "default": "gold"
+        }
+      }
+    },
+    "level-rewards": {
+      "type": "Level",
+      "keys": {
+        "bonus_coins": {
+          "type": "number",
+          "description": "Bonus coins per level",
+          "default": 25
+        },
+        "bonus_gems": {
+          "type": "number",
+          "description": "Bonus gems per level",
+          "default": 1
+        },
+        "special_reward_enabled": {
+          "type": "boolean",
+          "description": "Enable special milestone rewards",
+          "default": false
+        }
+      }
+    },
+    "daily-quest": {
+      "type": "Level",
+      "keys": {
+        "quest_count": {
+          "type": "number",
+          "description": "Number of daily quests",
+          "default": 3
+        },
+        "quest_difficulty": {
+          "type": "text",
+          "description": "Base difficulty of quests",
+          "default": "easy"
+        },
+        "completion_reward": {
+          "type": "number",
+          "description": "Reward for completing all quests",
+          "default": 200
+        }
+      }
+    },
+    "ui-theme": {
+      "type": "Param",
+      "keys": {
+        "primary_color": {
+          "type": "text",
+          "description": "Primary UI color",
+          "default": "#007bff"
+        },
+        "button_style": {
+          "type": "text",
+          "description": "Button design style",
+          "default": "rounded"
+        },
+        "animation_speed": {
+          "type": "number",
+          "description": "UI animation speed multiplier",
+          "default": 1.0
+        },
+        "dark_mode": {
+          "type": "boolean",
+          "description": "Enable dark mode",
+          "default": false
+        }
+      }
+    },
+    "achievement-popup": {
+      "type": "Popup",
+      "keys": {
+        "celebration_effect": {
+          "type": "text",
+          "description": "Visual celebration effect",
+          "default": "confetti"
+        },
+        "sound_enabled": {
+          "type": "boolean",
+          "description": "Play achievement sound",
+          "default": true
+        },
+        "auto_close_delay": {
+          "type": "number",
+          "description": "Auto close delay in seconds",
+          "default": 3
+        }
+      }
+    },
+    "inventory-settings": {
+      "type": "Param",
+      "keys": {
+        "max_slots": {
+          "type": "number",
+          "description": "Maximum inventory slots",
+          "default": 20
+        },
+        "auto_sort": {
+          "type": "boolean",
+          "description": "Enable automatic sorting",
+          "default": true
+        },
+        "show_categories": {
+          "type": "boolean",
+          "description": "Show item categories",
+          "default": true
+        },
+        "grid_size": {
+          "type": "text",
+          "description": "Inventory grid layout",
+          "default": "4x5"
+        }
+      }
+    }
+  }
+}
