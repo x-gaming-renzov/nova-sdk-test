@@ -1,129 +1,129 @@
 {
-  "objects": {
-    "ftue-landing": {
-      "type": "Level",
-      "keys": {
-        "game_title": { 
-          "type": "text", 
-          "description": "Main game title displayed on landing page", 
-          "default": "Nova Legends: Battle for the Stars" 
-        },
-        "tagline": { 
-          "type": "text", 
-          "description": "Marketing tagline shown below the game title", 
-          "default": "Join millions of players. Claim your welcome rewards and start your adventure!" 
-        },
-        "username_placeholder": { 
-          "type": "text", 
-          "description": "Placeholder text for hero name input field", 
-          "default": "Choose your hero name" 
-        },
-        "cta_button": { 
-          "type": "text", 
-          "description": "Call-to-action button text for entering the game", 
-          "default": "Enter the Arena" 
-        },
-        "background_art": { 
-          "type": "text", 
-          "description": "Background art identifier for landing page", 
-          "default": "hero-bg-1" 
-        }
-      }
-    },
-    "main-lobby": {
-      "type": "Level",
-      "keys": {
-        "welcome_message": { 
-          "type": "text", 
-          "description": "Personalized welcome message in main lobby", 
-          "default": "Welcome, {heroName}! Ready for your next quest?" 
-        },
-        "show_popup": { 
-          "type": "boolean", 
-          "description": "Whether to show welcome offer popup on lobby entry", 
-          "default": true 
-        }
-      }
-    },
-    "welcome-offer-popup": {
-      "type": "Popup",
-      "keys": {
-        "popup_title": { 
-          "type": "text", 
-          "description": "Title text for welcome offer popup", 
-          "default": "🎁 Welcome Offer" 
-        },
-        "popup_message": { 
-          "type": "text", 
-          "description": "Main message content of welcome offer popup", 
-          "default": "500 Gems + 20% Off Your First Purchase! Limited time only." 
-        },
-        "popup_button": { 
-          "type": "text", 
-          "description": "Button text for claiming the welcome offer", 
-          "default": "Claim Now" 
-        },
-        "discount_percentage": { 
-          "type": "number", 
-          "description": "Discount percentage for welcome offer", 
-          "default": 20 
-        }
-      }
-    },
-    "store-header": {
-      "type": "Level",
-      "keys": {
-        "store_title": { 
-          "type": "text", 
-          "description": "Main title displayed in store header", 
-          "default": "Nova Store" 
-        },
-        "store_subtitle": { 
-          "type": "text", 
-          "description": "Subtitle text shown below store title", 
-          "default": "Special offers and bundles just for you!" 
-        }
-      }
-    },
-    "store-products": {
-      "type": "Level",
-      "keys": {
-        "products": {
-          "type": "text",
-          "description": "JSON array of store products with names, tags, discounts and descriptions",
-          "default": "[{\"id\":\"starter-gem-pack\",\"name\":\"Starter Gem Pack\",\"tag\":\"🔥 Trending\",\"discount\":20,\"description\":\"Get 500 gems to kickstart your adventure.\"},{\"id\":\"epic-skin-bundle\",\"name\":\"Epic Skin Bundle\",\"tag\":\"New\",\"discount\":10,\"description\":\"Unlock exclusive skins for your heroes.\"},{\"id\":\"daily-energy-boost\",\"name\":\"Daily Energy Boost\",\"tag\":\"Best Value\",\"discount\":50,\"description\":\"Play longer with a daily energy refill.\"},{\"id\":\"legendary-chest\",\"name\":\"Legendary Chest\",\"tag\":\"Limited Time\",\"discount\":30,\"description\":\"Chance to win rare items and heroes.\"},{\"id\":\"vip-pass\",\"name\":\"VIP Pass\",\"tag\":\"Popular\",\"discount\":15,\"description\":\"Access premium features and rewards all month.\"}]"
-        }
-      }
-    },
-    "ui-theme": {
-      "type": "Param",
-      "keys": {
-        "primary_color": { 
-          "type": "text", 
-          "description": "Primary brand color used throughout the UI", 
-          "default": "#667eea" 
-        },
-        "accent_color": { 
-          "type": "text", 
-          "description": "Accent color for buttons and highlights", 
-          "default": "#ff6b6b" 
-        },
-        "background_color": { 
-          "type": "text", 
-          "description": "Main background color for dark theme", 
-          "default": "#181a20" 
-        },
-        "text_color": { 
-          "type": "text", 
-          "description": "Primary text color for readability", 
-          "default": "#fff" 
-        },
-        "card_radius": { 
-          "type": "number", 
-          "description": "Border radius in pixels for cards and buttons", 
-          "default": 16 
-        }
-      }
-    }
-  }
+	"objects": {
+		"ftue-landing": {
+			"type": "Level",
+			"keys": {
+				"game_title": {
+					"type": "text",
+					"description": "Main game title displayed on landing page",
+					"default": "Nova Legends: Battle for the Stars"
+				},
+				"tagline": {
+					"type": "text",
+					"description": "Marketing tagline shown below the game title",
+					"default": "Join millions of players. Claim your welcome rewards and start your adventure!"
+				},
+				"username_placeholder": {
+					"type": "text",
+					"description": "Placeholder text for hero name input field",
+					"default": "Choose your hero name"
+				},
+				"cta_button": {
+					"type": "text",
+					"description": "Call-to-action button text for entering the game",
+					"default": "Enter the Arena"
+				},
+				"background_art": {
+					"type": "text",
+					"description": "Background art identifier for landing page",
+					"default": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlV4idXyl_cA7eSZ0udd2HeL-GCqFOoEqgZQ&s"
+				}
+			}
+		},
+		"main-lobby": {
+			"type": "Level",
+			"keys": {
+				"welcome_message": {
+					"type": "text",
+					"description": "Personalized welcome message in main lobby",
+					"default": "Welcome, {heroName}! Ready for your next quest?"
+				},
+				"show_popup": {
+					"type": "boolean",
+					"description": "Whether to show welcome offer popup on lobby entry",
+					"default": true
+				}
+			}
+		},
+		"welcome-offer-popup": {
+			"type": "Popup",
+			"keys": {
+				"popup_title": {
+					"type": "text",
+					"description": "Title text for welcome offer popup",
+					"default": "🎁 Welcome Offer"
+				},
+				"popup_message": {
+					"type": "text",
+					"description": "Main message content of welcome offer popup",
+					"default": "500 Gems + 20% Off Your First Purchase! Limited time only."
+				},
+				"popup_button": {
+					"type": "text",
+					"description": "Button text for claiming the welcome offer",
+					"default": "Claim Now"
+				},
+				"discount_percentage": {
+					"type": "number",
+					"description": "Discount percentage for welcome offer",
+					"default": 20
+				}
+			}
+		},
+		"store-header": {
+			"type": "Level",
+			"keys": {
+				"store_title": {
+					"type": "text",
+					"description": "Main title displayed in store header",
+					"default": "Nova Store"
+				},
+				"store_subtitle": {
+					"type": "text",
+					"description": "Subtitle text shown below store title",
+					"default": "Special offers and bundles just for you!"
+				}
+			}
+		},
+		"store-products": {
+			"type": "Level",
+			"keys": {
+				"products": {
+					"type": "text",
+					"description": "JSON array of store products with names, tags, discounts and descriptions",
+					"default": "[{\"id\":\"starter-gem-pack\",\"name\":\"Starter Gem Pack\",\"tag\":\"🔥 Trending\",\"discount\":20,\"description\":\"Get 500 gems to kickstart your adventure.\"},{\"id\":\"epic-skin-bundle\",\"name\":\"Epic Skin Bundle\",\"tag\":\"New\",\"discount\":10,\"description\":\"Unlock exclusive skins for your heroes.\"},{\"id\":\"daily-energy-boost\",\"name\":\"Daily Energy Boost\",\"tag\":\"Best Value\",\"discount\":50,\"description\":\"Play longer with a daily energy refill.\"},{\"id\":\"legendary-chest\",\"name\":\"Legendary Chest\",\"tag\":\"Limited Time\",\"discount\":30,\"description\":\"Chance to win rare items and heroes.\"},{\"id\":\"vip-pass\",\"name\":\"VIP Pass\",\"tag\":\"Popular\",\"discount\":15,\"description\":\"Access premium features and rewards all month.\"}]"
+				}
+			}
+		},
+		"ui-theme": {
+			"type": "Param",
+			"keys": {
+				"primary_color": {
+					"type": "text",
+					"description": "Primary brand color used throughout the UI",
+					"default": "#667eea"
+				},
+				"accent_color": {
+					"type": "text",
+					"description": "Accent color for buttons and highlights",
+					"default": "#ff6b6b"
+				},
+				"background_color": {
+					"type": "text",
+					"description": "Main background color for dark theme",
+					"default": "#181a20"
+				},
+				"text_color": {
+					"type": "text",
+					"description": "Primary text color for readability",
+					"default": "#fff"
+				},
+				"card_radius": {
+					"type": "number",
+					"description": "Border radius in pixels for cards and buttons",
+					"default": 16
+				}
+			}
+		}
+	}
 }

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2025-07-19T16:51:23.139Z",
+    "generatedAt": "2025-07-20T00:05:30.657Z",
     "orgId": "org123",
     "appId": "app123",
     "version": "0.1.0",
@@ -33,7 +33,7 @@
         "background_art": {
           "type": "text",
           "description": "Background art identifier for landing page",
-          "default": "hero-bg-1"
+          "default": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlV4idXyl_cA7eSZ0udd2HeL-GCqFOoEqgZQ&s"
         }
       }
     },

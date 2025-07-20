@@ -26,23 +26,56 @@ const LandingPage: React.FC<{ onEnterArena: (heroName: string) => void }> = ({ o
 
   return (
     <div className="landing-page" style={{
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      position: 'relative',
       minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
       color: themeData?.text_color || '#fff',
-      padding: '20px'
+      padding: '20px',
+      overflow: 'hidden'
     }}>
+      {/* Background Image Layer */}
+      {landingData?.background_art && (
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundImage: `url(${landingData.background_art})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          filter: 'blur(8px)',
+          transform: 'scale(1.1)', // Slightly scale up to avoid blur edges
+          zIndex: 1
+        }} />
+      )}
+      
+      {/* Gradient Overlay Layer */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%)',
+        zIndex: 2
+      }} />
+      
+      {/* Content Layer */}
       <div className="landing-content" style={{
+        position: 'relative',
         textAlign: 'center',
         maxWidth: '600px',
         background: 'rgba(255, 255, 255, 0.1)',
         padding: '40px',
         borderRadius: `${themeData?.card_radius || 16}px`,
         backdropFilter: 'blur(10px)',
-        border: '1px solid rgba(255, 255, 255, 0.2)'
+        border: '1px solid rgba(255, 255, 255, 0.2)',
+        zIndex: 3
       }}>
         <h1 style={{
           fontSize: '3rem',
