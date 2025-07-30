@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { NovaProvider } from "nova-react-sdk";
+import NovaRegistry from "./nova-objects.json";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -14,7 +15,9 @@ root.render(
       config={{
         organisationId: "org123",
         appId: "app123",
-        apiEndpoint: "http://127.0.0.1:8000",
+        //apiEndpoint: "https://nova-manager-475016739432.us-central1.run.app",
+        apiEndpoint: "http://localhost:8000",
+        registry: NovaRegistry,
       }}
     >
       <App />

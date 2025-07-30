@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { useNova } from "nova-react-sdk";
+import { useNova, useNovaExperience } from "nova-react-sdk";
 
 // Types
 interface GameState {
@@ -11,11 +11,12 @@ interface GameState {
 
 // Landing Page Component
 const LandingPage: React.FC<{ onEnterArena: (heroName: string) => void }> = ({ onEnterArena }) => {
-  const { readNovaObject } = useNova();
   const [heroName, setHeroName] = useState('');
+  const { objects: landingObjects } = useNovaExperience("landing");
+  const { objects: themeObjects } = useNovaExperience("theme");
   
-  const landingData = readNovaObject("ftue-landing");
-  const themeData = readNovaObject("ui-theme");
+  const landingData = landingObjects?.["ftue-landing"];
+  const themeData = themeObjects?.["ui-theme"];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -142,9 +143,10 @@ const LandingPage: React.FC<{ onEnterArena: (heroName: string) => void }> = ({ o
 
 // Welcome Popup Component
 const WelcomePopup: React.FC<{ onClose: () => void; onClaimOffer: () => void }> = ({ onClose, onClaimOffer }) => {
-  const { readNovaObject } = useNova();
-  const popupData = readNovaObject("welcome-offer-popup");
-  const themeData = readNovaObject("ui-theme");
+  const { objects: popupObjects } = useNovaExperience("popup");
+  const { objects: themeObjects } = useNovaExperience("theme");
+  const popupData = popupObjects?.["welcome-offer-popup"];
+  const themeData = themeObjects?.["ui-theme"];
 
   return (
     <div style={{
@@ -218,11 +220,12 @@ const WelcomePopup: React.FC<{ onClose: () => void; onClaimOffer: () => void }> 
 
 // Main Lobby Component
 const MainLobby: React.FC<{ heroName: string; onNavigateToStore: () => void }> = ({ heroName, onNavigateToStore }) => {
-  const { readNovaObject } = useNova();
   const [showPopup, setShowPopup] = useState(false);
+  const { objects: lobbyObjects } = useNovaExperience("lobby");
+  const { objects: themeObjects } = useNovaExperience("theme");
   
-  const lobbyData = readNovaObject("main-lobby");
-  const themeData = readNovaObject("ui-theme");
+  const lobbyData = lobbyObjects?.["main-lobby"];
+  const themeData = themeObjects?.["ui-theme"];
 
   useEffect(() => {
     if (lobbyData?.show_popup) {
@@ -337,8 +340,8 @@ const MainLobby: React.FC<{ heroName: string; onNavigateToStore: () => void }> =
 
 // Product Card Component
 const ProductCard: React.FC<{ product: any }> = ({ product }) => {
-  const { readNovaObject } = useNova();
-  const themeData = readNovaObject("ui-theme");
+  const { objects: themeObjects } = useNovaExperience("theme");
+  const themeData = themeObjects?.["ui-theme"];
 
   return (
     <div style={{
@@ -436,11 +439,12 @@ const ProductCard: React.FC<{ product: any }> = ({ product }) => {
 
 // Store Page Component
 const StorePage: React.FC<{ onBack: () => void }> = ({ onBack }) => {
-  const { readNovaObject } = useNova();
+  const { objects: storeObjects } = useNovaExperience("store");
+  const { objects: themeObjects } = useNovaExperience("theme");
   
-  const storeHeaderData = readNovaObject("store-header");
-  const storeProductsData = readNovaObject("store-products");
-  const themeData = readNovaObject("ui-theme");
+  const storeHeaderData = storeObjects?.["store-header"];
+  const storeProductsData = storeObjects?.["store-products"];
+  const themeData = themeObjects?.["ui-theme"];
 
   const products = storeProductsData?.products ? JSON.parse(storeProductsData.products) : [];
 
@@ -512,7 +516,7 @@ const StorePage: React.FC<{ onBack: () => void }> = ({ onBack }) => {
 
 // Main App Component
 const App = () => {
-  const { setUser, loadAllObjects, trackEvent, state } = useNova();
+  const { setUser, loadAllExperiences, trackEvent, state } = useNova();
   const [gameState, setGameState] = useState<GameState>({
     screen: 'landing',
     heroName: '',
@@ -543,19 +547,19 @@ const App = () => {
   }, [setUser]);
 
   useEffect(() => {
-    const loadNovaObjects = async () => {
-      await loadAllObjects();
+    const loadNovaExperiences = async () => {
+      await loadAllExperiences();
       setNovaLoaded(true);
     };
 
     if (state.user) {
-      loadNovaObjects();
+      loadNovaExperiences();
       trackEvent("App Loaded", {
         user_id: state.user.userId,
         utm_source: state.user.userProfile?.utm_source
       });
     }
-  }, [state.user, loadAllObjects, trackEvent]);
+  }, [state.user, loadAllExperiences, trackEvent]);
 
   const handleEnterArena = (heroName: string) => {
     const userIdWithHero = `${heroName}_${Math.random().toString(36).substring(2, 8)}`;
@@ -611,7 +615,7 @@ const App = () => {
         color: '#fff',
         fontSize: '1.2rem'
       }}>
-        Loading Nova Legends...
+        Loading Nova Experiences...
       </div>
     );
   }

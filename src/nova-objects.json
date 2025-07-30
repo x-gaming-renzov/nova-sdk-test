@@ -1,0 +1,157 @@
+{
+	"objects": {
+	  "ftue-landing": {
+		"type": "Level",
+		"keys": {
+		  "game_title": {
+			"type": "text",
+			"description": "Main game title displayed on landing",
+			"default": "Nova Legends: Battle for the Stars"
+		  },
+		  "tagline": {
+			"type": "text",
+			"description": "Promotional tagline text",
+			"default": "Join millions of players. Claim your welcome rewards and start your adventure!"
+		  },
+		  "username_placeholder": {
+			"type": "text",
+			"description": "Placeholder text for username input",
+			"default": "Choose your hero name"
+		  },
+		  "cta_button": {
+			"type": "text",
+			"description": "Call to action button text",
+			"default": "Enter the Arena"
+		  },
+		  "background_art": {
+			"type": "text",
+			"description": "Background image URL",
+			"default": ""
+		  }
+		}
+	  },
+	  "ui-theme": {
+		"type": "Param",
+		"keys": {
+		  "primary_color": {
+			"type": "text",
+			"description": "Primary UI color",
+			"default": "#667eea"
+		  },
+		  "accent_color": {
+			"type": "text",
+			"description": "Accent color for buttons and highlights",
+			"default": "#ff6b6b"
+		  },
+		  "background_color": {
+			"type": "text",
+			"description": "Background color",
+			"default": "#181a20"
+		  },
+		  "text_color": {
+			"type": "text",
+			"description": "Primary text color",
+			"default": "#fff"
+		  },
+		  "card_radius": {
+			"type": "number",
+			"description": "Border radius for cards and buttons",
+			"default": 16
+		  }
+		}
+	  },
+	  "welcome-offer-popup": {
+		"type": "Popup",
+		"keys": {
+		  "popup_title": {
+			"type": "text",
+			"description": "Welcome popup title",
+			"default": "🎁 Welcome Offer"
+		  },
+		  "popup_message": {
+			"type": "text",
+			"description": "Welcome popup message",
+			"default": "500 Gems + 20% Off Your First Purchase! Limited time only."
+		  },
+		  "popup_button": {
+			"type": "text",
+			"description": "Popup action button text",
+			"default": "Claim Now"
+		  }
+		}
+	  },
+	  "main-lobby": {
+		"type": "Level",
+		"keys": {
+		  "welcome_message": {
+			"type": "text",
+			"description": "Welcome message with hero name placeholder",
+			"default": "Welcome, {heroName}! Ready for your next quest?"
+		  },
+		  "show_popup": {
+			"type": "boolean",
+			"description": "Whether to show welcome popup in lobby",
+			"default": true
+		  }
+		}
+	  },
+	  "store-header": {
+		"type": "Param",
+		"keys": {
+		  "store_title": {
+			"type": "text",
+			"description": "Store page title",
+			"default": "Nova Store"
+		  },
+		  "store_subtitle": {
+			"type": "text",
+			"description": "Store page subtitle",
+			"default": "Special offers and bundles just for you!"
+		  }
+		}
+	  },
+	  "store-products": {
+		"type": "Param",
+		"keys": {
+		  "products": {
+			"type": "text",
+			"description": "JSON string of store products",
+			"default": "[{\"id\":\"starter_pack\",\"name\":\"Starter Pack\",\"description\":\"Perfect for new heroes\",\"discount\":20,\"tag\":\"POPULAR\"},{\"id\":\"gem_bundle\",\"name\":\"Gem Bundle\",\"description\":\"1000 premium gems\",\"discount\":0,\"tag\":\"\"},{\"id\":\"hero_boost\",\"name\":\"Hero Boost\",\"description\":\"Double XP for 24 hours\",\"discount\":15,\"tag\":\"LIMITED\"}]"
+		  }
+		}
+	  }
+	},
+	"experiences": {
+	  "landing": {
+		"description": "First-time user experience and landing page",
+		"objects": {
+		  "ftue-landing": true
+		}
+	  },
+	  "theme": {
+		"description": "UI theme and styling configuration",
+		"objects": {
+		  "ui-theme": true
+		}
+	  },
+	  "popup": {
+		"description": "Welcome offers and promotional popups",
+		"objects": {
+		  "welcome-offer-popup": true
+		}
+	  },
+	  "lobby": {
+		"description": "Main game lobby experience",
+		"objects": {
+		  "main-lobby": true
+		}
+	  },
+	  "store": {
+		"description": "In-game store and monetization",
+		"objects": {
+		  "store-header": true,
+		  "store-products": true
+		}
+	  }
+	}
+  }
