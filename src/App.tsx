@@ -529,6 +529,7 @@ const App = () => {
       // Get UTM source from URL params
       const urlParams = new URLSearchParams(window.location.search);
       const utmSource = urlParams.get('utm_source') || 'direct';
+      const referrer = urlParams.get('referrer') || '';
       
       // Generate user ID with random component
       const randomId = Math.random().toString(36).substring(2, 15);
@@ -538,7 +539,7 @@ const App = () => {
         userId,
         userProfile: { 
           utm_source: utmSource,
-          referrer: document.referrer || 'direct'
+          referrer: referrer
         },
       });
     };
